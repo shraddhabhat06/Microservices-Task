@@ -66,3 +66,123 @@ This document provides details on testing various services after running the `do
 2. Once the services are running, use the above endpoints to verify the functionality.
 
 Happy testing!
+
+
+# Microservices Task
+This repository contains a microservices-based application built as part of a task submission. The project uses Docker and Docker Compose to manage and run the services.
+
+## Prerequisites
+- **Docker**: Version 20.10 or higher
+- **Docker Compose**: Version 1.29 or higher
+
+1. **Clone the Repository**
+   ```bash
+   git clone https://github.com/mohanDevOps-arch/Microservices-Task
+   
+2.  **Creating multiple folder**
+    ```bash
+    mkdir -p submission/user-service submission/product-service submission/order-service submission/gateway-service
+
+3. **Creating User Service Dockerfile:**
+
+    ```bash
+    cd user-service
+    nano Dockerfile
+
+    FROM node:14
+    WORKDIR /app
+    COPY package.json .
+    RUN npm install
+    COPY app.js .
+    EXPOSE 3000
+    CMD ["node", "app.js"]
+
+4. **Creating Product Service Dockerfile:**
+    ```bash
+    cd user-service
+    nano Dockerfile
+
+    FROM node:14
+    WORKDIR /app
+    COPY package.json .
+    RUN npm install
+    COPY app.js .
+    EXPOSE 3001
+    CMD ["node", "app.js"]
+
+5. **Creating Order Service Dockerfile:**
+    ```bash
+    cd order-service
+    nano Dockerfile
+
+    FROM node:14
+    WORKDIR /app
+    COPY package.json .
+    RUN npm install
+    COPY app.js .
+    EXPOSE 3002
+    CMD ["node", "app.js"]
+
+
+6. **Creating Order Service Dockerfile:**
+    ```bash
+    cd gateway-service
+    nano Dockerfile 
+
+    FROM node:14
+    WORKDIR /app
+    COPY package.json .
+    RUN npm install
+    COPY app.js .
+    EXPOSE 3003
+    CMD ["node", "app.js"]
+
+
+7. **Creatign docker-compose file**
+    ```bash
+    nano submission/docker-compose.yml
+
+    version: '3'
+    services:
+      user-service:
+        build: ./user-service
+        ports:
+          - "3000:3000"
+        networks:
+          - microservices-network
+      product-service:
+        build: ./product-service
+        ports:
+          - "3001:3001"
+        networks:
+          - microservices-network
+      order-service:
+        build: ./order-service
+        ports:
+          - "3002:3002"
+        networks:
+          - microservices-network
+      gateway-service:
+        build: ./gateway-service
+        ports:
+          - "3003:3003"
+        networks:
+          - microservices-network
+    networks:
+      microservices-network:
+        driver: bridge
+
+
+8. **Running Docker-compose:**
+    ```bash
+    cd submission
+    docker-compose up --build
+  
+## Screenshot
+
+1. User Service
+
+
+
+
+
