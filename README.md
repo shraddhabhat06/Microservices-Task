@@ -180,7 +180,37 @@ This repository contains a microservices-based application built as part of a ta
   
 ## Screenshot
 
-1. User Service
+1. docker-compose up --build
+
+<img src="https://github.com/user-attachments/assets/38fbe857-a1c8-4d6b-872c-235cf8c02faf" width="500">
+ 
+2. User Service
+
+<img src="https://github.com/user-attachments/assets/4a14ddea-53ed-41f4-a703-23d7e7ea97e5" width="500">
+
+3. Product Service:
+   
+<img src="https://github.com/user-attachments/assets/1bba9cd5-344d-44ec-ab2a-16d3a87f94a0" width="500">
+
+4. Order Service:
+
+<img src="https://github.com/user-attachments/assets/d10f7063-4989-4c70-a1d0-1d4ed80c6525" width="500">
+
+5. Gateway Service:
+   
+  <img src="https://github.com/user-attachments/assets/be1acf76-5f40-441c-8a0d-bbe6db49b5c0" width="500">
+  <img src="https://github.com/user-attachments/assets/1a250845-dea0-4d2d-bae5-6167587905e9" width="500">
+  <img src="https://github.com/user-attachments/assets/3bc556a2-2c1b-479c-a8ee-4af8548773e2" width="500">
+   
+
+
+
+
+
+
+
+ 
+
 
 
 
